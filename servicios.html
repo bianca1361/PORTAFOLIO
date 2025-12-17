@@ -6,9 +6,175 @@
     <title>servicios</title>
 </head>
 <body>
-    <header>
-        <h1>Contratar servicios</h1>
-    </header>
+    
+        <h1>Solicitud de servicios web</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="sobre-mi.html">Sobre mí</a></li>
+                <li><a href="experiencia.html">Experiencia</a></li>
+            </ul>
+        </nav>
+
+        <h2>Completa el formulario para solicitar un presupuesto o encargo</h2>
+        <form>
+
+        <fieldset>
+            <legend>Datos del cliente</legend>
+        
+            <!-- Nombre del cliente -->
+            <label for="nombre">Nombre completo *</label><br>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+        
+            <!-- Empresa o marca -->
+            <label for="empresa">Empresa / Marca</label><br>
+            <input type="text" id="empresa" name="empresa"><br><br>
+        
+            <!-- Correo electrónico -->
+            <label for="email">Correo electrónico *</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+        
+            <!-- Teléfono -->
+            <label for="telefono">Teléfono de contacto</label><br>
+            <input type="tel" id="telefono" name="telefono"><br><br>
+        </fieldset>
+        
+        <!-- ================= INFORMACIÓN DEL PROYECTO ================= -->
+        <fieldset>
+            <legend>Información del proyecto</legend>
+        
+            <!-- Tipo de web -->
+            <label for="tipo_web">¿Qué tipo de web necesitas? *</label><br>
+            <select id="tipo_web" name="tipo_web" required>
+                <option value="">Selecciona una opción</option>
+                <option value="corporativa">Web corporativa</option>
+                <option value="ecommerce">Tienda online</option>
+                <option value="portfolio">Portafolio</option>
+                <option value="blog">Blog</option>
+                <option value="landing">Landing page</option>
+            </select><br><br>
+        
+            <!-- Web nueva o rediseño -->
+            <label>¿Es una web nueva o un rediseño? *</label><br>
+            <input type="radio" id="nueva" name="estado_web" value="nueva" required>
+            <label for="nueva">Nueva</label><br>
+        
+            <input type="radio" id="redisenio" name="estado_web" value="redisenio">
+            <label for="redisenio">Rediseño</label><br><br>
+        
+            <!-- URL de la web actual -->
+            <label for="web_actual">URL de la web actual (si existe)</label><br>
+            <input type="url" id="web_actual" name="web_actual"><br><br>
+        </fieldset>
+        
+        <!-- ================= CONTENIDO ================= -->
+        <fieldset>
+            <legend>Contenido</legend>
+        
+            <!-- Número de páginas -->
+            <label for="paginas">Número aproximado de páginas *</label><br>
+            <select id="paginas" name="paginas" required>
+                <option value="">Selecciona</option>
+                <option value="1-5">1 a 5</option>
+                <option value="6-10">6 a 10</option>
+                <option value="11-20">11 a 20</option>
+                <option value="20+">Más de 20</option>
+            </select><br><br>
+        
+            <!-- Textos -->
+            <label>¿Quién proporciona los textos? *</label><br>
+            <input type="radio" id="textos_cliente" name="textos" value="cliente" required>
+            <label for="textos_cliente">Cliente</label><br>
+        
+            <input type="radio" id="textos_desarrollador" name="textos" value="desarrollador">
+            <label for="textos_desarrollador">Desarrollador</label><br><br>
+        
+            <!-- Imágenes -->
+            <label>¿Quién proporciona las imágenes? *</label><br>
+            <input type="radio" id="imagenes_cliente" name="imagenes" value="cliente" required>
+            <label for="imagenes_cliente">Cliente</label><br>
+        
+            <input type="radio" id="imagenes_desarrollador" name="imagenes" value="desarrollador">
+            <label for="imagenes_desarrollador">Desarrollador</label><br><br>
+        </fieldset>
+        
+        <!-- ================= FUNCIONALIDADES ================= -->
+        <fieldset>
+            <legend>Funcionalidades</legend>
+        
+            <!-- Funcionalidades que afectan el presupuesto -->
+            <label>
+                <input type="checkbox" name="funciones[]" value="formulario">
+                Formulario de contacto
+            </label><br>
+        
+            <label>
+                <input type="checkbox" name="funciones[]" value="blog">
+                Blog
+            </label><br>
+        
+            <label>
+                <input type="checkbox" name="funciones[]" value="login">
+                Área privada / usuarios
+            </label><br>
+        
+            <label>
+                <input type="checkbox" name="funciones[]" value="pagos">
+                Pagos online
+            </label><br>
+        
+            <label>
+                <input type="checkbox" name="funciones[]" value="idiomas">
+                Web multidioma
+            </label><br><br>
+        </fieldset>
+        
+        <!-- ================= DISEÑO ================= -->
+        <fieldset>
+            <legend>Diseño</legend>
+        
+            <!-- Referencias visuales -->
+            <label for="referencias">Webs de referencia</label><br>
+            <textarea id="referencias" name="referencias" rows="4"
+                placeholder="Indica webs que te gusten o sirvan de referencia"></textarea><br><br>
+        
+            <!-- Identidad visual -->
+            <label for="identidad">¿Cuentas con identidad visual (logo, colores)? *</label><br>
+            <select id="identidad" name="identidad" required>
+                <option value="">Selecciona</option>
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+            </select><br><br>
+        </fieldset>
+        
+        <!-- ================= PRESUPUESTO Y OBJETIVO ================= -->
+        <fieldset>
+            <legend>Presupuesto y objetivos</legend>
+        
+            <!-- Presupuesto estimado -->
+            <label for="presupuesto">Presupuesto aproximado *</label><br>
+            <select id="presupuesto" name="presupuesto" required>
+                <option value="">Selecciona</option>
+                <option value="bajo">Menos de 800 €</option>
+                <option value="medio">800 € - 2000 €</option>
+                <option value="alto">Más de 2000 €</option>
+            </select><br><br>
+        
+            <!-- Fecha deseada -->
+            <label for="fecha">Fecha deseada de entrega</label><br>
+            <input type="date" id="fecha" name="fecha"><br><br>
+        
+            <!-- Objetivo principal -->
+            <label for="objetivo">¿Cuál es el objetivo principal de la web? *</label><br>
+            <textarea id="objetivo" name="objetivo" rows="4" required></textarea><br><br>
+        </fieldset>
+        
+        <!-- ================= ENVÍO ================= -->
+        <input type="submit" value="Enviar solicitud">
+        
+        </form>
+ 
+
    
 </body>
 </html>
